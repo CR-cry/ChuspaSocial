@@ -58,7 +58,7 @@
 
 | ID | Descripción | Categoría | Estado |
 |---|---|---|---|
-| RNF-001 | | Rendimiento | Pendiente |
+| RNF-001 | El plugin debe instalarse y funcionar sin errores en Moodle 4.5 LTS (rama MOODLE_405_STABLE). Verificación: ejecutar la suite PHPUnit y moodle-plugin-ci sobre Moodle 4.5 en el CI, que debe pasar sin fallos. | Compatibilidad | Pendiente |
 
 ## Requerimientos de Sistema
 
