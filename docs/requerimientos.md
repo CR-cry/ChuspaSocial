@@ -59,6 +59,7 @@
 | ID | Descripción | Categoría | Estado |
 |---|---|---|---|
 | RNF-001 | | Rendimiento | Pendiente |
+| RNF-002 | El plugin debe instalarse y ejecutarse sin errores en PHP 8.1, 8.2 y 8.3. Verificación: ejecutar la suite PHPUnit y moodle-plugin-ci sobre las tres versiones de PHP en el CI, que debe pasar sin fallos. | Compatibilidad | Pendiente |
 
 ## Requerimientos de Sistema
 
