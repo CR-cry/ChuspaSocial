@@ -54,6 +54,26 @@
 - **Cuando** confirma la publicación,
 - **Entonces** el anuncio queda registrado con autor, fecha y contenido, y es visible en el muro general.
 
+### Actividad de Moodle
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-025 | Mostrar tareas nuevas en el muro de la materia | Media | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-025
+
+**Criterio 1**
+- **Dado** un docente que crea una nueva tarea en una materia,
+- **Cuando** la tarea se publica,
+- **Entonces** se genera automáticamente una publicación de actividad en el muro de la materia visible para los estudiantes inscritos.
+
+**Criterio 2**
+- **Dado** un estudiante inscrito en una materia con tareas nuevas,
+- **Cuando** accede al muro de la materia,
+- **Entonces** ve las publicaciones de actividad correspondientes a las tareas nuevas, con la información de la tarea y su fecha.
+
 ## Requerimientos No Funcionales
 
 | ID | Descripción | Categoría | Estado |
