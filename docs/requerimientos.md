@@ -8,6 +8,22 @@
 | ID | Descripción | Prioridad | Estado |
 |---|---|---|---|
 | RF-001 | | Alta | Pendiente |
+
+| RF-020 | Ver la lista de seguidores y seguidos | Baja | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-020
+
+**Criterio 1**
+- **Dado** un usuario autenticado que sigue a otros usuarios y tiene seguidores,
+- **Cuando** accede a la lista de seguidores y seguidos,
+- **Entonces** ve ambas listas separadas y paginadas, mostrando la información básica de cada usuario.
+
+**Criterio 2**
+- **Dado** un usuario con muchos seguidores o seguidos,
+- **Cuando** navega por la lista,
+- **Entonces** la lista se pagina correctamente y puede avanzar o retroceder entre páginas sin perder el contexto.
 | RF-021 | Ver el feed personalizado | Media | Pendiente |
 
 #### Criterios de aceptación
