@@ -53,6 +53,21 @@
 - **Dado** un administrador que redacta un anuncio institucional,
 - **Cuando** confirma la publicación,
 - **Entonces** el anuncio queda registrado con autor, fecha y contenido, y es visible en el muro general.
+| RF-024 | Destacar visualmente los anuncios oficiales | Media | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-024
+
+**Criterio 1**
+- **Dado** un anuncio oficial publicado en el muro,
+- **Cuando** el usuario visualiza el muro o el anuncio,
+- **Entonces** el anuncio se muestra con un color y un ícono distintos que lo diferencian de las publicaciones normales.
+
+**Criterio 2**
+- **Dado** un anuncio oficial y una publicación regular en el mismo muro,
+- **Cuando** el usuario los compara visualmente,
+- **Entonces** puede identificar el anuncio oficial por su estilo destacado (color e ícono) sin necesidad de leer el contenido.
 
 ## Requerimientos No Funcionales
 
