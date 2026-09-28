@@ -5,9 +5,26 @@
 ### Seguidores
 ### Anuncios
 
-| ID | Descripción | Prioridad | Estado |
+| ID | Descripción | Categoría | Estado |
 |---|---|---|---|
-| RF-001 | | Alta | Pendiente |
+| RNF-001 | El plugin debe instalarse y funcionar sin errores en Moodle 4.5 LTS (rama MOODLE_405_STABLE). Verificación: ejecutar la suite PHPUnit y moodle-plugin-ci sobre Moodle 4.5 en el CI, que debe pasar sin fallos. | Compatibilidad | Pendiente |
+| RNF-002 | El plugin debe instalarse y ejecutarse sin errores en PHP 8.1, 8.2 y 8.3. Verificación: ejecutar la suite PHPUnit y moodle-plugin-ci sobre las tres versiones de PHP en el CI, que debe pasar sin fallos. | Compatibilidad | Pendiente |
+
+| RF-020 | Ver la lista de seguidores y seguidos | Baja | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-020
+
+**Criterio 1**
+- **Dado** un usuario autenticado que sigue a otros usuarios y tiene seguidores,
+- **Cuando** accede a la lista de seguidores y seguidos,
+- **Entonces** ve ambas listas separadas y paginadas, mostrando la información básica de cada usuario.
+
+**Criterio 2**
+- **Dado** un usuario con muchos seguidores o seguidos,
+- **Cuando** navega por la lista,
+- **Entonces** la lista se pagina correctamente y puede avanzar o retroceder entre páginas sin perder el contexto.
 | RF-021 | Ver el feed personalizado | Media | Pendiente |
 
 #### Criterios de aceptación
@@ -53,13 +70,43 @@
 - **Dado** un administrador que redacta un anuncio institucional,
 - **Cuando** confirma la publicación,
 - **Entonces** el anuncio queda registrado con autor, fecha y contenido, y es visible en el muro general.
+| RF-024 | Destacar visualmente los anuncios oficiales | Media | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-024
+
+**Criterio 1**
+- **Dado** un anuncio oficial publicado en el muro,
+- **Cuando** el usuario visualiza el muro o el anuncio,
+- **Entonces** el anuncio se muestra con un color y un ícono distintos que lo diferencian de las publicaciones normales.
+
+**Criterio 2**
+- **Dado** un anuncio oficial y una publicación regular en el mismo muro,
+- **Cuando** el usuario los compara visualmente,
+- **Entonces** puede identificar el anuncio oficial por su estilo destacado (color e ícono) sin necesidad de leer el contenido.
+
+### Actividad de Moodle
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-025 | Mostrar tareas nuevas en el muro de la materia | Media | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-025
+
+**Criterio 1**
+- **Dado** un docente que crea una nueva tarea en una materia,
+- **Cuando** la tarea se publica,
+- **Entonces** se genera automáticamente una publicación de actividad en el muro de la materia visible para los estudiantes inscritos.
+
+**Criterio 2**
+- **Dado** un estudiante inscrito en una materia con tareas nuevas,
+- **Cuando** accede al muro de la materia,
+- **Entonces** ve las publicaciones de actividad correspondientes a las tareas nuevas, con la información de la tarea y su fecha.
 
 ## Requerimientos No Funcionales
-
-| ID | Descripción | Categoría | Estado |
-|---|---|---|---|
-| RNF-001 | | Rendimiento | Pendiente |
-| RNF-002 | El plugin debe instalarse y ejecutarse sin errores en PHP 8.1, 8.2 y 8.3. Verificación: ejecutar la suite PHPUnit y moodle-plugin-ci sobre las tres versiones de PHP en el CI, que debe pasar sin fallos. | Compatibilidad | Pendiente |
 
 ## Requerimientos de Sistema
 
