@@ -1,4 +1,4 @@
-# Architecture Decision Records (ADR)
+# ARCHITECTURE DECISION RECORDS (ADR)
 
 Los Architecture Decision Records (ADR) son documentos que registran decisiones importantes de arquitectura tomadas durante el desarrollo del proyecto.
 
