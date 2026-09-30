@@ -147,6 +147,27 @@
 - **Dado** un administrador autenticado en el panel de Administración,
 - **Cuando** configura el número máximo de imágenes por publicación y el número de publicaciones mostradas por página,
 - **Entonces** el muro respeta esos límites al crear publicaciones y al paginar el feed de cada materia.
+
+### Notificaciones
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-027 | Notificar un comentario en mi publicación | Media | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-027
+
+**Criterio 1**
+- **Dado** un usuario que tiene una publicación en el muro,
+- **Cuando** otro usuario escribe un comentario en esa publicación,
+- **Entonces** el autor recibe una notificación de Moodle con el nombre de quien comentó.
+
+**Criterio 2**
+- **Dado** un usuario que comenta su propia publicación,
+- **Cuando** se guarda el comentario,
+- **Entonces** el sistema no envía ninguna notificación.
+
 ## Requerimientos No Funcionales
 
 | ID | Descripción | Categoría | Estado |
