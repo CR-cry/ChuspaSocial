@@ -105,6 +105,25 @@
 - **Cuando** accede al muro de la materia,
 - **Entonces** ve las publicaciones de actividad correspondientes a las tareas nuevas, con la información de la tarea y su fecha.
 
+### Administración
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-042 | Configurar los límites del muro: longitud máxima de una publicación, cantidad máxima de imágenes por publicación y número de publicaciones mostradas por página | Baja | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-042
+
+**Criterio 1**
+- **Dado** un administrador autenticado en el panel de Administración,
+- **Cuando** configura la longitud máxima permitida para una publicación,
+- **Entonces** las publicaciones que superen ese límite no pueden guardarse y el sistema muestra un mensaje de error.
+
+**Criterio 2**
+- **Dado** un administrador autenticado en el panel de Administración,
+- **Cuando** configura el número máximo de imágenes por publicación y el número de publicaciones mostradas por página,
+- **Entonces** el muro respeta esos límites al crear publicaciones y al paginar el feed de cada materia.
 ## Requerimientos No Funcionales
 
 | ID | Descripción | Categoría | Estado |
