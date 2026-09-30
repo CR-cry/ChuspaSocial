@@ -2,6 +2,29 @@
 
 ## Requerimientos Funcionales
 
+### Muro
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-006 | Eliminar una publicación propia | Alta | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-006
+
+**Criterio 1**
+
+- **Dado** un usuario autenticado que tiene una publicación propia en el muro,
+- **Cuando** selecciona la opción de eliminar su publicación y confirma la acción,
+- **Entonces** el sistema elimina la publicación seleccionada y deja de mostrarla en el muro.
+
+
+**Criterio 2**
+
+- **Dado** un usuario que intenta eliminar una publicación creada por otro usuario,
+- **Cuando** confirma la acción de eliminación,
+- **Entonces** el sistema rechaza la operación y mantiene la publicación sin cambios.
+
 ### Seguidores
 ### Anuncios
 
