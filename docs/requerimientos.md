@@ -85,6 +85,27 @@
 - **Cuando** el usuario los compara visualmente,
 - **Entonces** puede identificar el anuncio oficial por su estilo destacado (color e ícono) sin necesidad de leer el contenido.
 
+### Comentarios 
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-012 | Ver los comentarios de una publicación | Alta | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-012
+
+**Criterio 1**
+
+- **Dado** un usuario que visualiza una publicación con comentarios,
+- **Cuando** accede a los comentarios de la publicación,
+- **Entonces**  puede ver los comentarios asociados a esa publicación en orden cronologico.
+
+**Criterio 2**
+
+- **Dado** una publicación con varios comentarios,
+- **Cuando** el usuario visualiza la seccion de comentarios,
+- **Entonces** los comentarios se muestran en orden cronológico bajo la publicación.
+
 ### Actividad de Moodle
 
 | ID | Descripción | Prioridad | Estado |
@@ -118,3 +139,4 @@
 | ID | Descripción |
 |---|---|
 | RS-001 | |
+
