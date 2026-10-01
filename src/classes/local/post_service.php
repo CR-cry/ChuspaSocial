@@ -29,14 +29,15 @@ class post_service {
         $post = new post($postid);
 
         // Criterio de Aceptacion: Valida que el usuario actual sea el autor
-        if ((int) $post->get('usermodified') !== (int) $USER->id && (int) $post->get('userid') !== (int) $USER->id) {
-            throw new moodle_exception('cannotupdatepost', 'local_chuspasocial', '', null, 'Solo el autor puede editar esta publiacion.');            
+        if ((int) $post->get('userid') !== (int) $USER->id) {
+            throw new moodle_exception('cannotupdatepost', 'local_chuspasocial', '', null, 'Solo el autor puede editar esta publicación.');
         }
 
         // Actualizar datos
         $post->set('content', $content);
         $post->set('format', $format);
         $post->set('timemodified', time());
+        $post->set('usermodified', $USER->id);
 
         // Guardar cambios en la base de datos
         $post->update();
