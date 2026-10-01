@@ -8,6 +8,12 @@
 |---|---|---|---|
 | RF-006 | Eliminar una publicación propia | Alta | Pendiente |
 
+### Módulo Tags
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-015 | Etiquetar una publicación | Alta | Pendiente |
+
 #### Criterios de aceptación
 
 ### RF-006
@@ -27,6 +33,19 @@
 
 ### Seguidores
 ### Anuncios
+
+### RF-015 - Etiquetar una publicación
+
+#### Criterio 1
+* **Dado** que el usuario se encuentra creando o editando una publicación,
+* **Cuando** empiece a escribir en el campo de etiquetas o use los tags predefinidos de Moodle,
+* **Entonces** el sistema deberá asociar de forma correcta dichas etiquetas a la publicación al momento de guardarla.
+
+#### Criterio 2
+* **Dado** que una publicación cuenta con etiquetas asociadas,
+* **Cuando** se visualice la publicación en el muro,
+* **Entonces** las etiquetas deberán ser visibles para todos los usuarios y permitir la navegación o filtrado por esos tags.
+
 
 | ID | Descripción | Prioridad | Estado |
 |---|---|---|---|
