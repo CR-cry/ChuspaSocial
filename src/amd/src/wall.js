@@ -2,7 +2,7 @@ define(['jquery'], function($) {
     'use strict';
 
     return {
-
+        
         focusFirstNewPost: function(container) {
             const $newPost = $(container).find('.post-item, article').first();
             
@@ -15,6 +15,13 @@ define(['jquery'], function($) {
         },
 
         init: function() {
+            $(document).on('click', '[data-action="load-more"]', function() {
+                $(document).one('wall:posts-loaded', function(e, data) {
+                    if (data && data.content) {
+                        this.focusFirstNewPost(data.content);
+                    }
+                }.bind(this));
+            }.bind(this));
         }
     };
 });
