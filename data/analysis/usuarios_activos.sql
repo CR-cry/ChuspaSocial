@@ -21,3 +21,15 @@ GROUP BY
     userid
 ORDER BY 
     interacciones_totales DESC;
+
+/*
+=========================================
+EJEMPLO DE RESULTADO (Criterio de aceptación)
+=========================================
+userid  | total_publicaciones | total_comentarios | interacciones_totales
+-------------------------------------------------------------------------
+14      | 12                  | 34                | 46
+5       | 8                   | 15                | 23
+89      | 1                   | 5                 | 6
+=========================================
+*/
