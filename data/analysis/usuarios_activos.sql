@@ -1,0 +1,4 @@
+-- =========================================================
+-- Consulta para medir métricas de éxito: usuarios más activos
+-- Se utiliza estrictamente el 'userid' para no exponer datos personales.
+-- =========================================================
