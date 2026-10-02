@@ -7,6 +7,7 @@
 | ID | Descripción | Prioridad | Estado |
 |---|---|---|---|
 | RF-006 | Eliminar una publicación propia | Alta | Pendiente |
+| RF-008 | Cargar más publicaciones | Media | Pendiente |
 
 #### Criterios de aceptación
 
@@ -18,13 +19,23 @@
 - **Cuando** selecciona la opción de eliminar su publicación y confirma la acción,
 - **Entonces** el sistema elimina la publicación seleccionada y deja de mostrarla en el muro.
 
-
-**Criterio 2**
+  **Criterio 2**
 
 - **Dado** un usuario que intenta eliminar una publicación creada por otro usuario,
 - **Cuando** confirma la acción de eliminación,
 - **Entonces** el sistema rechaza la operación y mantiene la publicación sin cambios.
 
+### RF-008 - Cargar más publicaciones
+
+#### Criterio 1
+* **Dado** que el usuario se encuentra en el módulo Muro y existen más publicaciones disponibles en la base de datos,
+* **Cuando** visualice el final de las publicaciones actuales y haga clic en el botón "Cargar más",
+* **Entonces** el sistema deberá cargar y mostrar las siguientes publicaciones en la pantalla sin recargar la página.
+
+#### Criterio 2
+* **Dado** que el usuario está en el módulo Muro,
+* **Cuando** ya se hayan cargado todas las publicaciones existentes en la base de datos,
+* **Entonces** el botón "Cargar más" deberá quedar oculto o deshabilitado.
 ### Comentarios
 
 | ID | Descripción | Prioridad | Estado |
