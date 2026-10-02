@@ -25,6 +25,25 @@
 - **Cuando** confirma la acción de eliminación,
 - **Entonces** el sistema rechaza la operación y mantiene la publicación sin cambios.
 
+### Comentarios
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-012 | Ver los comentarios de una publicación | Alta | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-012
+
+**Criterio 1**
+- **Dado** un usuario que visualiza una publicación con comentarios,
+- **Cuando** consulta la publicación,
+- **Entonces** el sistema muestra sus comentarios en orden cronológico debajo de la publicación.
+
+**Criterio 2**
+- **Dado** un usuario que visualiza una publicación sin comentarios,
+- **Cuando** consulta la publicación,
+- **Entonces** el sistema muestra el área de comentarios sin entradas y permite identificar que aún no existen comentarios.
 ### Reacciones
 
 | ID | Descripción | Prioridad | Estado |
