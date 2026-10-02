@@ -7,6 +7,19 @@
 | ID | Descripción | Prioridad | Estado |
 |---|---|---|---|
 | RF-006 | Eliminar una publicación propia | Alta | Pendiente |
+| RF-008 | Cargar más publicaciones | Media | Pendiente |
+
+### Módulo Tags
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-015 | Etiquetar una publicación | Alta | Pendiente |
+
+### Módulo Tags
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-016 | Filtrar el muro por tag | Alta | Pendiente |
 
 ### Módulo Tags
 
@@ -24,12 +37,61 @@
 - **Cuando** selecciona la opción de eliminar su publicación y confirma la acción,
 - **Entonces** el sistema elimina la publicación seleccionada y deja de mostrarla en el muro.
 
-
-**Criterio 2**
+  **Criterio 2**
 
 - **Dado** un usuario que intenta eliminar una publicación creada por otro usuario,
 - **Cuando** confirma la acción de eliminación,
 - **Entonces** el sistema rechaza la operación y mantiene la publicación sin cambios.
+
+### RF-008 - Cargar más publicaciones
+
+#### Criterio 1
+* **Dado** que el usuario se encuentra en el módulo Muro y existen más publicaciones disponibles en la base de datos,
+* **Cuando** visualice el final de las publicaciones actuales y haga clic en el botón "Cargar más",
+* **Entonces** el sistema deberá cargar y mostrar las siguientes publicaciones en la pantalla sin recargar la página.
+
+#### Criterio 2
+* **Dado** que el usuario está en el módulo Muro,
+* **Cuando** ya se hayan cargado todas las publicaciones existentes en la base de datos,
+* **Entonces** el botón "Cargar más" deberá quedar oculto o deshabilitado.
+### Comentarios
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-012 | Ver los comentarios de una publicación | Alta | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-012
+
+**Criterio 1**
+- **Dado** un usuario que visualiza una publicación con comentarios,
+- **Cuando** consulta la publicación,
+- **Entonces** el sistema muestra sus comentarios en orden cronológico debajo de la publicación.
+
+**Criterio 2**
+- **Dado** un usuario que visualiza una publicación sin comentarios,
+- **Cuando** consulta la publicación,
+- **Entonces** el sistema muestra el área de comentarios sin entradas y permite identificar que aún no existen comentarios.
+### Reacciones
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-013 | Reaccionar a una publicación | Alta | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-013
+
+**Criterio 1**
+- **Dado** un usuario autenticado que visualiza una publicación,
+- **Cuando** selecciona la opción «Me gusta»,
+- **Entonces** el sistema registra la reacción del usuario en esa publicación.
+
+**Criterio 2**
+- **Dado** un usuario que ya reaccionó con «Me gusta» a una publicación,
+- **Cuando** vuelve a seleccionar la misma opción,
+- **Entonces** el sistema actualiza el estado de su reacción sin crear registros duplicados.
 
 ### Seguidores
 ### Anuncios
@@ -45,6 +107,28 @@
 * **Dado** que el usuario ya sigue una etiqueta específica,
 * **Cuando** decida hacer clic en el botón de "Dejar de seguir",
 * **Entonces** el sistema deberá remover la etiqueta de sus suscripciones y dejar de priorizar esas publicaciones en su feed.
+### RF-016 - Filtrar el muro por tag
+
+#### Criterio 1
+* **Dado** que el usuario se encuentra visualizando las publicaciones en el muro,
+* **Cuando** haga clic sobre una etiqueta (tag) específica en cualquier publicación,
+* **Entonces** el sistema deberá recargar el listado mostrando únicamente las publicaciones que contengan dicha etiqueta.
+
+#### Criterio 2
+* **Dado** que el muro se encuentra filtrado por una etiqueta específica,
+* **Cuando** el usuario decida limpiar el filtro o hacer clic en la opción de restablecer el muro,
+* **Entonces** el sistema deberá mostrar nuevamente todas las publicaciones disponibles sin ningún tipo de filtro.
+### RF-015 - Etiquetar una publicación
+
+#### Criterio 1
+* **Dado** que el usuario se encuentra creando o editando una publicación,
+* **Cuando** empiece a escribir en el campo de etiquetas o use los tags predefinidos de Moodle,
+* **Entonces** el sistema deberá asociar de forma correcta dichas etiquetas a la publicación al momento de guardarla.
+
+#### Criterio 2
+* **Dado** que una publicación cuenta con etiquetas asociadas,
+* **Cuando** se visualice la publicación en el muro,
+* **Entonces** las etiquetas deberán ser visibles para todos los usuarios y permitir la navegación o filtrado por esos tags.
 
 
 | ID | Descripción | Prioridad | Estado |
@@ -166,6 +250,46 @@
 - **Dado** un administrador autenticado en el panel de Administración,
 - **Cuando** configura el número máximo de imágenes por publicación y el número de publicaciones mostradas por página,
 - **Entonces** el muro respeta esos límites al crear publicaciones y al paginar el feed de cada materia.
+
+### Marketplace
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-035 | Buscar libros por título o autor | Media | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-035
+
+**Criterio 1**
+- **Dado** que el usuario se encuentra en el buscador del Marketplace,
+- **Cuando** ingresa el título de un libro existente y ejecuta la búsqueda de texto,
+- **Entonces** el sistema debe retornar el libro correspondiente en los resultados.
+
+**Criterio 2**
+- **Dado** que el usuario se encuentra en el buscador del Marketplace,
+- **Cuando** ingresa el nombre de un autor en el campo de texto,
+- **Entonces** el sistema debe mostrar una lista con todos los libros registrados bajo ese autor.
+### Notificaciones
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-027 | Notificar un comentario en mi publicación | Media | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-027
+
+**Criterio 1**
+- **Dado** un usuario que tiene una publicación en el muro,
+- **Cuando** otro usuario escribe un comentario en esa publicación,
+- **Entonces** el autor recibe una notificación de Moodle con el nombre de quien comentó.
+
+**Criterio 2**
+- **Dado** un usuario que comenta su propia publicación,
+- **Cuando** se guarda el comentario,
+- **Entonces** el sistema no envía ninguna notificación.
+
 ## Requerimientos No Funcionales
 
 | ID | Descripción | Categoría | Estado |
