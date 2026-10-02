@@ -15,6 +15,12 @@
 |---|---|---|---|
 | RF-015 | Etiquetar una publicación | Alta | Pendiente |
 
+### Módulo Tags
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-016 | Filtrar el muro por tag | Alta | Pendiente |
+
 #### Criterios de aceptación
 
 ### RF-006
@@ -84,6 +90,17 @@
 ### Seguidores
 ### Anuncios
 
+### RF-016 - Filtrar el muro por tag
+
+#### Criterio 1
+* **Dado** que el usuario se encuentra visualizando las publicaciones en el muro,
+* **Cuando** haga clic sobre una etiqueta (tag) específica en cualquier publicación,
+* **Entonces** el sistema deberá recargar el listado mostrando únicamente las publicaciones que contengan dicha etiqueta.
+
+#### Criterio 2
+* **Dado** que el muro se encuentra filtrado por una etiqueta específica,
+* **Cuando** el usuario decida limpiar el filtro o hacer clic en la opción de restablecer el muro,
+* **Entonces** el sistema deberá mostrar nuevamente todas las publicaciones disponibles sin ningún tipo de filtro.
 ### RF-015 - Etiquetar una publicación
 
 #### Criterio 1
