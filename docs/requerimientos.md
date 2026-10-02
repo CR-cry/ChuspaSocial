@@ -1,4 +1,4 @@
- # Requerimientos del Proyecto
+# Requerimientos del Proyecto
 
 ## Requerimientos Funcionales
 
@@ -21,6 +21,11 @@
 
   
 **Criterio 2**
+
+- **Dado** un usuario que intenta eliminar una publicación creada por otro usuario,
+- **Cuando** confirma la acción de eliminación,
+- **Entonces** el sistema rechaza la operación y mantiene la publicación sin cambios.
+
 ### RF-008 - Cargar más publicaciones
 
 #### Criterio 1
@@ -32,10 +37,6 @@
 * **Dado** que el usuario está en el módulo Muro,
 * **Cuando** ya se hayan cargado todas las publicaciones existentes en la base de datos,
 * **Entonces** el botón "Cargar más" deberá quedar oculto o deshabilitado.
-
-- **Dado** un usuario que intenta eliminar una publicación creada por otro usuario,
-- **Cuando** confirma la acción de eliminación,
-- **Entonces** el sistema rechaza la operación y mantiene la publicación sin cambios.
 
 ### Seguidores
 ### Anuncios
