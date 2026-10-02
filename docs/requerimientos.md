@@ -187,6 +187,25 @@
 - **Cuando** configura el número máximo de imágenes por publicación y el número de publicaciones mostradas por página,
 - **Entonces** el muro respeta esos límites al crear publicaciones y al paginar el feed de cada materia.
 
+### Marketplace
+
+| ID | Descripción | Prioridad | Estado |
+|---|---|---|---|
+| RF-035 | Buscar libros por título o autor | Media | Pendiente |
+
+#### Criterios de aceptación
+
+### RF-035
+
+**Criterio 1**
+- **Dado** que el usuario se encuentra en el buscador del Marketplace,
+- **Cuando** ingresa el título de un libro existente y ejecuta la búsqueda de texto,
+- **Entonces** el sistema debe retornar el libro correspondiente en los resultados.
+
+**Criterio 2**
+- **Dado** que el usuario se encuentra en el buscador del Marketplace,
+- **Cuando** ingresa el nombre de un autor en el campo de texto,
+- **Entonces** el sistema debe mostrar una lista con todos los libros registrados bajo ese autor.
 ### Notificaciones
 
 | ID | Descripción | Prioridad | Estado |
