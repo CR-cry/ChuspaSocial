@@ -19,8 +19,7 @@
 - **Cuando** selecciona la opción de eliminar su publicación y confirma la acción,
 - **Entonces** el sistema elimina la publicación seleccionada y deja de mostrarla en el muro.
 
-  
-**Criterio 2**
+  **Criterio 2**
 
 - **Dado** un usuario que intenta eliminar una publicación creada por otro usuario,
 - **Cuando** confirma la acción de eliminación,
